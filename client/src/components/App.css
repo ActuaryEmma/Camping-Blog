@@ -1,16 +1,21 @@
 
-body{
+.body{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
   rgba(0, 0, 0, 0.5)), url("../images/image3.jpg");
   background-size: cover;
+  padding: 60px 0 220px 0;
+}
+.text{
+  color: white
 }
 
 
 .main{
+  /* margin-bottom: 40px; */
   text-align: center;
   justify-content: center;
   display: block;
-  padding: 50px 0 5px 0;
+  /* padding: 50px 0 5px 0; */
   /* background-color: black; */
   /* background-image: url(../images/image2.jpeg); */
   background-size: cover;
