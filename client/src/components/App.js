@@ -7,7 +7,7 @@ import Home from './Home';
 import About from './About';
 import Login from './Login';
 import NavBar from './NavBar';
-// import Signup from './Signup';
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -20,8 +20,8 @@ function App() {
     });
   }, []);
 
-  // if (!user) return <Login onLogin={setUser} />;
-  //  if (!user) return <Redirect to="/home"/>;
+  if (!user) return <Login onLogin={setUser} />;
+  //  if (!user) return <Redirect to="/login"/>;
   
 
 
@@ -30,13 +30,11 @@ function App() {
       
    <div>
     <div>
-        <NavBar/>
+        <NavBar setUser={setUser}/>
       </div>
       <Routes>
        <Route exact path= '/home'  element={<Home/>} />
        <Route exact path= '/about' element={<About/>} />
-       <Route exact path= '/login' element={<Login/>} />
-       {/* <Route exact path= '/signup' element={<Signup/>} /> */}
       </Routes>
    </div>
   );

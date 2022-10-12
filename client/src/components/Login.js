@@ -3,14 +3,15 @@ import LoginForm from "./LoginForm"
 import Signup from "./Signup"
 
 
+
 function Login({ onLogin }) {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <div>
-     
+    <div className="body">
+      <div className= "main">
       {showLogin ? (
-        <div className= "main">
+        <div className="text">
           <LoginForm onLogin={onLogin} />
           <p>
             Don't have an account?
@@ -22,7 +23,7 @@ function Login({ onLogin }) {
           </p>
         </div>
       ) : (
-        <div className= "main">
+        <div >
           <Signup onLogin={onLogin} />
           <p>
             Already have an account?
@@ -32,6 +33,9 @@ function Login({ onLogin }) {
           </p>
         </div>
       )}
+      </div>
+     
+      
     </div>
   );
 }
