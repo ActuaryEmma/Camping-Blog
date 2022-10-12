@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+    rescue_from ActiveRecord::RecordInvalid, with: :unprocessable_entity_response
+
     def index
         render json: Comment.all, status: :ok
     end
@@ -22,5 +24,9 @@ class CommentsController < ApplicationController
     private
     def comment_params
         params.permit :user_comment, :user_id, :blog_id
+    end
+
+    def unprocessable_entity_response(invalid)
+        render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
     end
 end
