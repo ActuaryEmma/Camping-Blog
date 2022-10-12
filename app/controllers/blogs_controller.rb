@@ -21,6 +21,7 @@ class BlogsController < ApplicationController
     def not_found_response
         render json: {error: "Blog not found"}, status: :not_found
     end
+    
     def unprocessable_entity_response(invalid)
         render json: {errors: invalid.record.errors.full_messages}, status: :unprocessable_entity
     end
