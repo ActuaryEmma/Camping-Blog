@@ -32,7 +32,6 @@ function Signup({onLogin}) {
     });
   }
 
-
     return (  
        
     <form onSubmit={handleSubmit}>
@@ -41,19 +40,23 @@ function Signup({onLogin}) {
           <div>
             <h1>Signup</h1>
             <div>
-              <input type="text" placeholder="user name" className="name" />
+              <input type="text" placeholder="user name" className="name" value={username}
+          onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <br />
             <div>
-              <input type="text" placeholder="email" className="name" />
+              <input type="text" placeholder="email" className="name"value={email}
+          onChange={(e) => setEmail(e.target.value)} />
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password" className="name" />
+              <input type="text" placeholder="password" className="name" value={password}
+          onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password confirmation" className="name" />
+              <input type="text" placeholder="password confirmation" className="name" value={passwordConfirmation}
+          onChange={(e) => setPasswordConfirmation(e.target.value)} />
             </div>
           </div>
         </div>
