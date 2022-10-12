@@ -13,4 +13,14 @@ class CommentsController < ApplicationController
         comment.update(user_comment: params[:user_comment])
         render json: comment, status: :accepted
     end
+
+    def create 
+        comment = Comment.create!(comment_params)
+        render json: comment, status: :created
+    end
+
+    private
+    def comment_params
+        params.permit :user_comment, :user_id, :blog_id
+    end
 end
