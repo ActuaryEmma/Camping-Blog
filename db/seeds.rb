@@ -7,9 +7,27 @@ User.create(username: "Kamau Mwangi", email: "kamaus@example.com", password_dige
 User.create(username: "Doreen Garcia", email: "dorgarcia@example.com", password_digest: "dobetter")
 
 #comments instance
-Comment.create(user_comment: "had mad fun", user_id:1, blog_id:2)
-Comment.create(user_comment: "Enjoyed my stay", user_id:2, blog_id:3)
-Comment.create(user_comment: "Wish I stayed longer", user_id:3, blog_id:1)
+
+Comment.create([
+    {
+        user_comment:   "Had a lovely weekend there!",
+        user_id: 1,
+        blog_id: 1
+    },
+    {
+        user_comment: "Enjoyed my stay",
+        user_id: 2,
+        blog_id: 2
+    }, 
+    {
+        user_comment: "Wish I stayed longer",
+        user_id:3,
+        blog_id:3,
+    }
+])
+# Comment.create(user_comment: "had mad fun", user_id:1, blog_id:2)
+# Comment.create(user_comment: "Enjoyed my stay", user_id:2, blog_id:3)
+# Comment.create(user_comment: "Wish I stayed longer", user_id:3, blog_id:1)
 
 #blog instance
 Blog.create(title: "Serengeti Plains", description: "Serengeti National Park is a World Heritage Site teeming with wildlife: over 2 million ungulates, 4000 lions, 1000 leopard, 550 cheetahs and some 500 bird species inhabit an area close to 15,000 square kilometers in size.")

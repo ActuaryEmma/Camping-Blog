@@ -7,4 +7,10 @@ class UsersController < ApplicationController
         user = User.find_by!(id: params[:id])
         render json: user, status: :ok
     end
+
+    def update
+        user= User.find_by!(id: params[:id])
+        user.update(username: params[:username])
+        render json: user, status: :accepted
+    end
 end
