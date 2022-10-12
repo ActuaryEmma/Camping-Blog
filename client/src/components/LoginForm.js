@@ -1,6 +1,5 @@
 
 import React, {useState} from "react";
-import {Link} from "react-router-dom"
 import {useNavigate} from "react-router-dom"
 
 function LoginForm({onLogin}) {
@@ -11,6 +10,7 @@ function LoginForm({onLogin}) {
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
+
   
     function handleSubmit(e) {
       e.preventDefault();
@@ -31,9 +31,16 @@ function LoginForm({onLogin}) {
       });
      }
 
-    function handleClick(path){
-        navigate(path)
-    }
+
+
+    // function handleClick(path){
+    //   console.log(path)
+    //     navigate(path)
+    // }
+
+    // function handleChange(event){
+    //   setUsername(event.target.value)
+    // }
 return (
     <form onSubmit={handleSubmit}>
       <div className="main">
@@ -41,18 +48,20 @@ return (
           <div>
             <h1>Login</h1>
             <div>
-              <input type="text" placeholder="user name" className="name" />
+              <input type="text" placeholder="user name" className="name" value={username}
+          onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password" className="name" />
+              <input type="text" placeholder="password" className="name"  value={password}
+          onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <br />
             <div>
-            <button type="button" className="button-1" onClick={() => handleClick("/home")}>
+            <button type="button" className="button-1">
               Login
             </button>
-            </div>
+            </div><br/>
             
           </div>
           <div>
