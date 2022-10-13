@@ -1,3 +1,4 @@
 class BlogSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :title, :description
+  has_many :comments, serializer: CommentSerializer
 end

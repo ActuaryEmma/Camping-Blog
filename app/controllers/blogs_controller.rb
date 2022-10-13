@@ -7,8 +7,8 @@ class BlogsController < ApplicationController
     end
 
     def show
-        blog = Blog.find_by!(id: params[:id])
-        render json: blog, serializer: CommentSerializer,  status: :ok
+        blog = Blog.find_by(id: params[:id])
+        render json: blog, status: :ok
     end
 
     def update
