@@ -16,7 +16,7 @@ function AddComment({commentData, setCommentData,userids, blogid}){
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch("http://localhost:3000/blogcomment", {
+        fetch("http://localhost:3000/comments", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

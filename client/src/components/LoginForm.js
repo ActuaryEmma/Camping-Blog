@@ -16,7 +16,7 @@ function LoginForm({onLogin}) {
       console.log("text")
       e.preventDefault();
       setIsLoading(true);
-      fetch("http://localhost:3000/user", {
+      fetch("http://localhost:3000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
