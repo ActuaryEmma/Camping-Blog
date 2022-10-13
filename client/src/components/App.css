@@ -155,3 +155,36 @@ a{
   font-size: 25px;
   border: none;
 }
+.major{
+  
+  border:solid;color:white;width: 1200px;height: 500px;margin-left: 200px;border-radius: 15px;
+  border-block-color: orange;
+  background-color:rgb(2, 55, 55);opacity: 90%;
+
+  
+  margin-top: 100px;
+  padding-left: 120px;
+  padding-right: 150px;
+
+}
+.head{
+  margin-bottom: 50px;
+  padding-left: 320px
+
+  
+
+  
+}
+.infor{
+  color: white;
+  font-size: 20px;
+
+}
+.cont h2{
+  padding-left: 340px;
+}
+.social li{
+display: inline;
+padding-left: 150px;
+color:orange
+}
