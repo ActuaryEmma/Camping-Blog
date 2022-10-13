@@ -1,14 +1,20 @@
 .homepage{
   background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-  rgba(0, 0, 0, 0.5)), url("../images/image5.jpg");
+  rgba(0, 0, 0, 0.5)), url("../images/image4.jpg");
   background-size: cover;
   /* padding: 0px 0 250px 0; */
-  padding: 200px
+  padding: 200px;
+  height: 150px
 }
 .page{
   background-color: rgb(66, 30, 3);
   color: white
 
+}
+.titlepage{
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
 }
 .editdelete{
   display: flex;
