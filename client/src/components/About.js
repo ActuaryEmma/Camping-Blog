@@ -24,17 +24,17 @@ function About() {
                 <ul className="social">
                     <li>
                     <a href="youtube">
-  <img src="../images/youtube(1).png" alt="youtube">
+  <img src="./images/youtube(1).png" alt="youtube">
   </img></a> 
                     </li>
                     <li>
                     <a href="twitter">
-  <img src="../images/twiter.png" alt="twitter" >
+  <img src="./components/images/twiter.png" alt="twitter" >
   </img></a>   
                     </li>
                     <li>
                     <a href="instagram">
-  <img src="../images/instagram(2).png" alt="instagram" >
+  <img src="./components/images/instagram(2).png" alt="instagram" >
   </img></a>   
                     </li>
                     
