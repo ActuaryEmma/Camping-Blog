@@ -9,7 +9,7 @@ function Blog() {
   const [userData, setUserData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/user")
+    fetch("http://localhost:3000/users")
       .then((response) => response.json())
       .then((data) => setUserData(data));
     // .then((data) => {
@@ -29,7 +29,7 @@ function Blog() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:3000/blogcomment")
+    fetch("http://localhost:3000/blogs")
       .then((response) => response.json())
       .then((data) => setBlog(data));
     // .then((data) => {
