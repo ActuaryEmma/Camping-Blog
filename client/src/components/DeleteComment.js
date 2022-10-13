@@ -35,7 +35,7 @@ function DeleteComment({id, blog, setCommentData, blog_id}){
     }
     return(
         <div>
-            <button onClick={handleDeleteClick}>Delete</button>
+            <button  className="btn1" onClick={handleDeleteClick}>Delete</button>
         </div>
     )
 }

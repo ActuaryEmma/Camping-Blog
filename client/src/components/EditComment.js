@@ -33,7 +33,7 @@ function EditComment({
           id={id}
         />
       )}
-      <button onClick={handlehide}>✏️</button>
+      <button className="btn1" onClick={handlehide}>Edit</button>
     </div>
   );
 }

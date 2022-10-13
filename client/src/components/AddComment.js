@@ -41,7 +41,7 @@ function AddComment({commentData, setCommentData,userids, blogid}){
     return(
         <div>
             <form onSubmit={handleSubmit}>
-            <input onChange={handleChange} type="text" name="comment" value={newObj.name}/>
+            <input onChange={handleChange} type="text" name="comment" value={newObj.name} placeholder="add a comment"/>
                 <button type="submit">Send</button>
             </form>
         </div>

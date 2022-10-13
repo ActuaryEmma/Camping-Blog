@@ -55,26 +55,30 @@ function Blog() {
                 <div>
                   <p>{itemcomment.user.username}</p>
                   <p>{itemcomment.comment}</p>
-                  <EditComment
-                   key={itemcomment.id}
-                   id={itemcomment.id}
-                   user={itemcomment.user.name}
-                   comment={itemcomment.comment}
-                   commentData={commentData}
-                   setCommentData={setCommentData}
-                  
-                  />
-
-                  <DeleteComment
-                  key={itemcomment.id}
-                  id={itemcomment.id}
-                  comment={item.comment}
-                  commentData={commentData}
-                  setCommentData={setCommentData}
-                  blog_id={item.id}
-                  blog={blog}
-                  setBlog={setBlog}
-                  />
+                  <div className="editdelete">
+                    <div >
+                      <EditComment
+                        key={itemcomment.id}
+                        id={itemcomment.id}
+                        user={itemcomment.user.name}
+                        comment={itemcomment.comment}
+                        commentData={commentData}
+                        setCommentData={setCommentData}
+                      />
+                    </div>
+                    <div>
+                      <DeleteComment
+                        key={itemcomment.id}
+                        id={itemcomment.id}
+                        comment={item.comment}
+                        commentData={commentData}
+                        setCommentData={setCommentData}
+                        blog_id={item.id}
+                        blog={blog}
+                        setBlog={setBlog}
+                      />
+                    </div>
+                  </div>
                 </div>
               );
             })}

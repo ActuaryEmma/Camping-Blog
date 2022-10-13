@@ -39,9 +39,9 @@ function Edit({id,commentBody, setCommentBody, setIsHidden, onHandleUpdateCommen
               onChange={handleChange}
               contentEditable={true}
             />
-          </div>
+          </div><br/>
           <div>
-            <input type="submit" value="Save" />
+            <input  type="submit" value="Save" />
           </div>
         </form>
         </div>
