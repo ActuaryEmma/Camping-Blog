@@ -1,15 +1,18 @@
 .homepage{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-  rgba(0, 0, 0, 0.5)), url("../images/image4.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+  rgba(0, 0, 0, 0.1)), url("../images/imag10.jpg");
   background-size: cover;
   /* padding: 0px 0 250px 0; */
-  padding: 200px;
-  height: 150px
+  padding: 150px;
+  
 }
 .page{
-  background-color: rgb(66, 30, 3);
+  background-color: rgb(114, 52, 8);
   color: white
-
+}
+.paragraph {
+  font-size: 40px;
+  color: white
 }
 .titlepage{
   text-align: center;
