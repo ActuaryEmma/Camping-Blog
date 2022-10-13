@@ -13,14 +13,14 @@ function App() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/user").then((r) => {
+    fetch("http://localhost:3000/users").then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user));
+        r.json().then((users) => setUser(users));
       }
     });
   }, []);
 
-  if (!user) return <Login onLogin={setUser} />;
+  // if (!user) return <Login onLogin={setUser} />;
   //  if (!user) return <Redirect to="/login"/>;
   
 
