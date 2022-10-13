@@ -1,12 +1,92 @@
 {
-    "user": [
+  "user": [
+    {
+      "id": 1,
+      "username": "Emma",
+      "password": "123",
+      "password_confirmation": "123",
+      "email": "emma@example.com"
+    },
+    {
+      "id": 2,
+      "username": "Emma1",
+      "password": "1234",
+      "password_confirmation": "1234",
+      "email": "emma@example.com"
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "image": "http://example.com/images/blog.jpg",
+      "title": "Blog",
+      "description": "This is a blog that contains information"
+    },
+    {
+      "id": 2,
+      "image": "http://example.com/images/blog.jpg",
+      "title": "Blog",
+      "description": "This is a blog that contains information"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "comment": "This is a comment1",
+      "user.id": 2,
+      "blog.id": 1
+    },
+    {
+      "id": 1,
+      "comment": "This is a comment1",
+      "user.id": 1,
+      "blog.id": 1
+    },
+    {
+      "id": 1,
+      "comment": "This is a comment1",
+      "user.id": 1,
+      "blog.id": 1
+    }
+  ],
+  "blogcomment": [
+    {
+      "id": 1,
+      "image": "http://example.com/images/blog.jpg",
+      "title": "Blog",
+      "description": "This is a blog that contains information",
+      "comments": [
         {
-            "username": "Emma",
-            "password": "123",
-            "password_confirmation": "123",
-            "email": "emma@example.com"
+          "id": 1,
+          "comment": "This is a comment1",
+          "user_id": 1,
+          "blog_id": 1,
+          "user": {
+            "id": 2,
+            "username": "Emma1"
+          }
+        },
+        {
+          "id": 2,
+          "comment": "This is a comment2",
+          "user_id": 1,
+          "blog_id": 1,
+          "user": {
+            "id": 1,
+            "username": "Emma"
+          }
+        },
+        {
+          "id": 3,
+          "comment": "This is a comment3",
+          "user_id": 1,
+          "blog_id": 1,
+          "user": {
+            "id": 1,
+            "username": "Emma"
+          }
         }
-
-    ]
+      ]
+    }
+  ]
 }
-    
