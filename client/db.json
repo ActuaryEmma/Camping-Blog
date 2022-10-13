@@ -13,6 +13,31 @@
       "password": "1234",
       "password_confirmation": "1234",
       "email": "emma@example.com"
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 3
+    },
+    {
+      "username": "Emma",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "username": "Emma",
+      "password": "1234",
+      "id": 5
+    },
+    {
+      "username": "ee",
+      "password": "ee",
+      "id": 6
+    },
+    {
+      "username": "",
+      "password": "",
+      "id": 7
     }
   ],
   "blog": [

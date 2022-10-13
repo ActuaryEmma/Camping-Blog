@@ -13,6 +13,7 @@ function LoginForm({onLogin}) {
 
   
     function handleSubmit(e) {
+      console.log("text")
       e.preventDefault();
       setIsLoading(true);
       fetch("http://localhost:3000/user", {
@@ -29,20 +30,11 @@ function LoginForm({onLogin}) {
           r.json().then((err) => setErrors(err.errors));
         }
       });
+
      }
 
-
-
-    // function handleClick(path){
-    //   console.log(path)
-    //     navigate(path)
-    // }
-
-    // function handleChange(event){
-    //   setUsername(event.target.value)
-    // }
 return (
-    <form onSubmit={handleSubmit}>
+    <form >
       <div className="main">
         <div>
           <div>
@@ -58,7 +50,7 @@ return (
             </div>
             <br />
             <div>
-            <button type="button" className="button-1">
+            <button onClick={handleSubmit} type="button" className="button-1">
               Login
             </button>
             </div><br/>

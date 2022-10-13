@@ -7,7 +7,7 @@ function Home() {
     <div className="page">
         
       <div className= "homepage"></div><br/>
-      <h4>THE CAMPING</h4>
+      <h4 className="titlepage">THE CAMPING</h4><br/><br/>
       <div>
         <Blog />
       </div>
