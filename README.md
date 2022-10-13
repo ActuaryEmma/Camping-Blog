@@ -75,5 +75,5 @@ Slack Profile
  - Emma Nyakio
  - Carlton Mbaja
  - Byron Odhiambo
- - Nicholas Kamau
+ - Simon Kamau
  
