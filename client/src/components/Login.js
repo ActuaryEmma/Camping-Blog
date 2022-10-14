@@ -23,7 +23,7 @@ function Login({ onLogin }) {
           </p>
         </div>
       ) : (
-        <div >
+        <div className="text" >
           <Signup onLogin={onLogin} />
           <p>
             Already have an account?
