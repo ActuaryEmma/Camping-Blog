@@ -8,6 +8,7 @@ function NavBar({setUser}) {
     { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
+        alert("Logged Out")
       }
     });
   }
