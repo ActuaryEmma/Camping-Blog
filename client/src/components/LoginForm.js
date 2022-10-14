@@ -7,7 +7,7 @@ function LoginForm({onLogin}) {
     const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [password_digest, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -15,50 +15,47 @@ function LoginForm({onLogin}) {
     function handleSubmit(e) {
       e.preventDefault();
       setIsLoading(true);
-      fetch("http://localhost:3000/user", {
+      fetch("/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password_digest }),
       }).then((r) => {
         setIsLoading(false);
         if (r.ok) {
-          r.json().then((user) => onLogin(user));
+          r.json().then(() => navigate("/home"))
         } else {
           r.json().then((err) => setErrors(err.errors));
         }
       });
+      
+      // console.log({
+      //   username, password
+
+      // })
+
      }
+    
 
-
-
-    // function handleClick(path){
-    //   console.log(path)
-    //     navigate(path)
-    // }
-
-    // function handleChange(event){
-    //   setUsername(event.target.value)
-    // }
 return (
-    <form onSubmit={handleSubmit}>
+    <form >
       <div className="main">
         <div>
           <div>
             <h1>Login</h1>
             <div>
-              <input type="text" placeholder="user name" className="name" value={username}
+              <input type="text" placeholder="username" className="name" value={username}
           onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password" className="name"  value={password}
+              <input type="text" placeholder="password" className="name"  value={password_digest}
           onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <br />
             <div>
-            <button type="button" className="button-1">
+            <button onClick={handleSubmit} type="button" className="button-1">
               Login
             </button>
             </div><br/>
