@@ -13,13 +13,13 @@ function Edit({id,commentBody, setCommentBody, setIsHidden, onHandleUpdateCommen
       function handleSubmit(e) {
         e.preventDefault();
     
-        fetch(`http://localhost:9292/comments/${id}`, {
+        fetch(`/comments/${id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            comment: commentBody,
+            commentBody: commentBody,
           }),
         })
           .then((response) => response.json())

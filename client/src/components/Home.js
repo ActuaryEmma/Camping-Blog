@@ -7,7 +7,7 @@ function Home() {
     <div className="page">
         
       <div className= "homepage">
-      <p className="paragraph">LIFE IS BETTER THE CAMP FIRE</p>
+      <p className="paragraph">LIFE IS BETTER BY THE CAMP FIRE</p>
       </div><br/>
       <h4 className="titlepage">THE CAMPING</h4><br/><br/>
       <div>

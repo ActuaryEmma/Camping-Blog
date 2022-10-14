@@ -13,14 +13,14 @@ function App() {
   const [user, setUser] = useState(null);
 
   // useEffect(() => {
-  //   fetch("http://localhost:3000/user").then((r) => {
+  //   fetch("/me").then((r) => {
   //     if (r.ok) {
   //       r.json().then((user) => setUser(user));
   //     }
   //   });
   // }, []);
 
-  if (!user) return <Login onLogin={setUser} />;
+  // if (!user) return <Login onLogin={setUser} />;
   //  if (!user) return <Redirect to="/login"/>;
   
 
@@ -33,7 +33,7 @@ function App() {
         <NavBar setUser={setUser}/>
       </div>
       <Routes>
-       <Route exact path= '/home'  element={<Home/>} />
+       <Route exact path= '/home'  element={<Home user={user} setUser={setUser}/>} />
        <Route exact path= '/about' element={<About/>} />
       </Routes>
    </div>
