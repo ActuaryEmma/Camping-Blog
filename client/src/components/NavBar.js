@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function NavBar({setUser}) {
 
   function handleLogoutClick() {
-    fetch("http://localhost:3000/logout", 
+    fetch("/logout", 
     { method: "DELETE" }).then((r) => {
       if (r.ok) {
         setUser(null);
