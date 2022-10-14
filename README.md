@@ -4,8 +4,7 @@
  ## Group G
  
 ## Screenshot
- ![![Screenshot from 2022-10-14 08-40-42](https://user-images.githubusercontent.com/104425175/195777458-86e0bdec-ff2e-4abf-ac39-ec21d1d363fd.png)
-]
+ !![Screenshot from 2022-10-14 08-40-42](https://user-images.githubusercontent.com/104425175/195777458-86e0bdec-ff2e-4abf-ac39-ec21d1d363fd.png)
 
  
  ## Table of Content
