@@ -16,7 +16,7 @@ function AddComment({commentData, setCommentData,userids, blogid}){
 
     function handleSubmit(e){
         e.preventDefault();
-        fetch("http://localhost:3000/comments", {
+        fetch("/comments", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -29,7 +29,7 @@ function AddComment({commentData, setCommentData,userids, blogid}){
         console.log(userids)
         console.log(blogid)
     })
-    //  .then((newdata) => setCommentData([...commentData, newdata]))
+      .then((newdata) => setCommentData([...commentData, newdata]))
     setNewObj({
         comment: "",
         user_id: userids,
@@ -41,8 +41,8 @@ function AddComment({commentData, setCommentData,userids, blogid}){
     return(
         <div>
             <form onSubmit={handleSubmit}>
-            <input onChange={handleChange} type="text" name="comment" value={newObj.name} placeholder="add a comment"/>
-                <button type="submit">Send</button>
+            <input onChange={handleChange} className="inputtype" type="text" name="comment" value={newObj.name} placeholder="add a comment"/>
+                <button className="btn3" type="submit">Send</button>
             </form>
         </div>
     )

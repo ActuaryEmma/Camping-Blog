@@ -4,7 +4,7 @@ function DeleteComment({id, blog, setCommentData, blog_id}){
 
     function handleDeleteClick(){
         
-        fetch(`http://localhost:3000/comments/${id}`, {
+        fetch("/comments", {
             method: 'DELETE'
         
         })

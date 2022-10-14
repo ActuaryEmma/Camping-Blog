@@ -13,10 +13,9 @@ function LoginForm({onLogin}) {
 
   
     function handleSubmit(e) {
-      console.log("text")
       e.preventDefault();
       setIsLoading(true);
-      fetch("http://localhost:3000/login", {
+      fetch("/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -25,13 +24,19 @@ function LoginForm({onLogin}) {
       }).then((r) => {
         setIsLoading(false);
         if (r.ok) {
-          r.json().then((user) => onLogin(user));
+          r.json().then(() => navigate("/home"))
         } else {
           r.json().then((err) => setErrors(err.errors));
         }
       });
+      
+      // console.log({
+      //   username, password
+
+      // })
 
      }
+    
 
 return (
     <form >
@@ -40,7 +45,7 @@ return (
           <div>
             <h1>Login</h1>
             <div>
-              <input type="text" placeholder="user name" className="name" value={username}
+              <input type="text" placeholder="username" className="name" value={username}
           onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <br />

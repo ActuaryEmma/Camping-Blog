@@ -3,7 +3,7 @@ class BlogsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :unprocessable_entity_response
 
     def index
-        render json: Blog.all, status: :ok
+        render json: Blog.all, include: ["comments", "comments.user"]
     end
 
     def show

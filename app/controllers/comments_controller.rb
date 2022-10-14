@@ -6,19 +6,26 @@ class CommentsController < ApplicationController
     end
 
     def show
-        comment = Comment.find_by!(id: params[:id])
+        comment = Comment.find_by(id: params[:id])
         render json: comment, status: :ok
     end
 
     def update
-        comment= Comment.find_by!(id: params[:id])
-        comment.update(user_comment: params[:user_comment])
+        comment= Comment.find_by(id: params[:id])
+        comment.update!(user_comment: params[:user_comment])
         render json: comment, status: :accepted
     end
 
     def create 
-        comment = Comment.create!(comment_params)
+        blog = Blog.find(params[:blog_id])
+        comment = blog.comments.create!(comment_params)
         render json: comment, status: :created
+    end
+
+    def destroy
+        comment = Comment.find_by(id: params[:id])
+        comment.destroy
+        head :no_content
     end
 
     private
