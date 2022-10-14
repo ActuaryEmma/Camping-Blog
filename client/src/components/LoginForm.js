@@ -7,7 +7,7 @@ function LoginForm({onLogin}) {
     const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const [password_digest, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -21,7 +21,7 @@ function LoginForm({onLogin}) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password_digest }),
       }).then((r) => {
         setIsLoading(false);
         if (r.ok) {
@@ -45,7 +45,7 @@ return (
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password" className="name"  value={password}
+              <input type="text" placeholder="password" className="name"  value={password_digest}
           onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <br />
