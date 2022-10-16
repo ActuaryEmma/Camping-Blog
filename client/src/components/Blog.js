@@ -9,35 +9,19 @@ function Blog({user, setUser}) {
   const [userData, setUserData] = useState([]);
   const[show, setShow]= useState(false);
 
-  // useEffect(() => {
-  //   fetch("/users")
-  //     .then((response) => response.json())
-  //     // .then((data) => setUser(data));
-  //      .then((data) => {
-  //       console.log(data)
-  //   })
-  
-  // }, []);
-  // const userids = user.map((item) => item.id);
-  // console.log(userids);
 
   useEffect(() => {
     fetch("/comments")
       .then((response) => response.json())
       .then((data) => setCommentData(data));
-    // .then((data) => {
-    //     console.log(data)
-    // })
   }, []);
 
   useEffect(() => {
     fetch("/blogs")
       .then((response) => response.json())
-      .then((data) => setBlog(data));
-    // .then((data) => {
-    //     console.log(data)
-    // })
-  }, []);
+      .then((data) => setBlog(data))
+
+  }, [setCommentData]);
 
   return (
     <div>
@@ -47,7 +31,6 @@ function Blog({user, setUser}) {
           <BlogCard
           user={user} 
           setUser={setUser}
-            // userids={userids}
             commentData={commentData}
             setCommentData={setCommentData}
             key={item.key}
@@ -66,7 +49,7 @@ function Blog({user, setUser}) {
                         key={itemcomment.id}
                         id={itemcomment.id}
                         user={itemcomment.user.name}
-                        comment={itemcomment.user_comment}
+                        user_comment={itemcomment.user_comment}
                         commentData={commentData}
                         setCommentData={setCommentData}
                       />

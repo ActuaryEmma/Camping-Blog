@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom"
+
 function Signup({onLogin}) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -6,12 +8,14 @@ function Signup({onLogin}) {
   const [email, setEmail] = useState("");
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  
+  const navigate = useNavigate()
 
   function handleSubmit(e) {
     e.preventDefault();
     setErrors([]);
     setIsLoading(true);
-    fetch("/login", {
+    fetch("/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -25,7 +29,10 @@ function Signup({onLogin}) {
     }).then((r) => {
       setIsLoading(false);
       if (r.ok) {
-        r.json().then((user) => onLogin(user));
+        r.json().then((user) => {
+          onLogin(user)
+           navigate("/")
+        });
       } else {
         r.json().then((err) => setErrors(err.errors));
       }
@@ -36,6 +43,10 @@ function Signup({onLogin}) {
        
     <form onSubmit={handleSubmit}>
       <div className="main">
+        {errors.map((error) => {
+          
+         return <p key={error} style={{color: "red"}}>{error}</p>
+        })}
         <div>
           <div>
             <h1>Signup</h1>
@@ -58,6 +69,10 @@ function Signup({onLogin}) {
               <input type="text" placeholder="password confirmation" className="name" value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)} />
             </div>
+
+            <button onClick={handleSubmit} type="button" className="button-1">
+              Login
+            </button>
           </div>
         </div>
       </div>

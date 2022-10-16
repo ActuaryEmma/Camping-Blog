@@ -7,7 +7,7 @@ function LoginForm({onLogin}) {
     const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
-    const [password_digest, setPassword] = useState("");
+    const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -20,11 +20,17 @@ function LoginForm({onLogin}) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, password_digest }),
+        body: JSON.stringify({ username, password }),
       }).then((r) => {
         setIsLoading(false);
         if (r.ok) {
-          r.json().then(() => navigate("/home"))
+          r.json().then((user) =>{
+
+            onLogin(user)
+            navigate("/")
+          });
+
+
         } else {
           r.json().then((err) => setErrors(err.errors));
         }
@@ -41,6 +47,9 @@ function LoginForm({onLogin}) {
 return (
     <form >
       <div className="main">
+        {errors.map((error) => {
+          return  <p  style={{color: "red"}} key={error}>{error}</p>
+        })}
         <div>
           <div>
             <h1>Login</h1>
@@ -50,7 +59,7 @@ return (
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password" className="name"  value={password_digest}
+              <input type="text" placeholder="password" className="name"  value={password}
           onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <br />

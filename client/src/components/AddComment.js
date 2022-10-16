@@ -1,17 +1,18 @@
-import REact, {useState, useEffect} from "react";
+import React, {useState, useRef} from "react";
 
-function AddComment({commentData, setCommentData,userids, blogid}){
-    console.log(userids)
+function AddComment({commentData, setCommentData, blogid}){
+
+    const formreset = useRef()
+
     console.log(blogid)
     const[newObj, setNewObj] = useState({
-        comment: "",
-        user_id: userids,
+        user_comment: "",
         blog_id: blogid
     })
 
     function handleChange(event) {
         //  console.log(event.target.value)
-        setNewObj({ ...newObj, [event.target.name]: event.target.value });
+        setNewObj({ [event.target.name]: event.target.value , blog_id: blogid});
       }
 
     function handleSubmit(e){
@@ -23,26 +24,39 @@ function AddComment({commentData, setCommentData,userids, blogid}){
         },
         body: JSON.stringify(newObj)
     })
-    .then((response) => response.json())
-    .then ((data) => {
-        console.log(data)
-        console.log(userids)
-        console.log(blogid)
-    })
-      .then((newdata) => setCommentData([...commentData, newdata]))
+    
+    .then((response) => {
+        if (response.ok) 
+            {
+                response.json()
+                .then ((data) => setCommentData([...commentData, data]))
+            }else {
+                response.json()
+                .then((errors) => console.log(errors))
+            }
+
+        } )
+
+    // .then ((data) => {
+    //     console.log(newObj)
+    //     console.log(data)
+    //     console.log(blogid)
+    // })
+    //   .then((newdata) => setCommentData([...commentData, newdata]))
     setNewObj({
-        comment: "",
-        user_id: userids,
+        user_comment: "",
         blog_id: blogid,
+        
     })
+    formreset.current.reset()
     }
 
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
-            <input onChange={handleChange} className="inputtype" type="text" name="comment" value={newObj.name} placeholder="add a comment"/>
-                <button className="btn3" type="submit">Send</button>
+            <form onSubmit={handleSubmit} ref={formreset}>
+            <input onChange={handleChange} className="inputtype" type="text" name="user_comment" value={newObj.name} placeholder="add a comment"/>
+                <input className="btn3" type="submit" value="Send"/>
             </form>
         </div>
     )

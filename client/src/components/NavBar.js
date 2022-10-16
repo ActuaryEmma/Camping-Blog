@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function NavBar({setUser}) {
+function NavBar({user, setUser}) {
 
   function handleLogoutClick() {
     fetch("/logout", 
@@ -12,22 +12,26 @@ function NavBar({setUser}) {
       }
     });
   }
+
+
   return (
     <div>
       <ul className="nav justify-content-center">
         <li>
-          <Link className="nav-link" to="/home">
+          <Link className="nav-link" to="/">
             Home
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link className="nav-link" to="/about">
             About
           </Link>
-        </li>
+        </li> */}
+
+        
         <li>
           <Link className="nav-link" to="/login">
-            Login
+            LoginForm
           </Link>
         </li>
         <li>

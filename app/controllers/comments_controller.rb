@@ -17,8 +17,9 @@ class CommentsController < ApplicationController
     end
 
     def create 
+        user = User.find(session[:user_id])
         blog = Blog.find(params[:blog_id])
-        comment = blog.comments.create!(comment_params)
+        comment = user.comments.create!(comment_params)
         render json: comment, status: :created
     end
 

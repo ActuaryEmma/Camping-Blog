@@ -3,12 +3,12 @@ import Edit from "./Edit";
 
 function EditComment({
   id,
-  comment,
+  user_comment,
   commentData,
   setCommentData,
   
 }) {
-  const [commentBody, setCommentBody] = useState(comment);
+  const [commentBody, setCommentBody] = useState(user_comment);
   const [isHidden, setIsHidden] = useState(true);
 
   function handlehide() {

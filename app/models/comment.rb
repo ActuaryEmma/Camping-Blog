@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
-    validates :user_comment, presence: true, uniqueness: false
+     validates :user_comment, presence: true
     # validates :user_id, presence: true, uniqueness: false
     validates :blog_id, presence: true, uniqueness: false
 

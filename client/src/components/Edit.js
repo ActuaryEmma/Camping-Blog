@@ -1,10 +1,12 @@
 import React from 'react';
 
-function Edit({id,commentBody, setCommentBody, setIsHidden, onHandleUpdateComment}){
+function Edit({id,commentBody, setCommentBody, setIsHidden}){
 
 
 
     function handleChange(event) {
+      // setCommentBody({[event.target.name]: event.target.value})
+
         let updatedComment = event.target.value;
         console.log(updatedComment);
         setCommentBody(updatedComment);
@@ -18,12 +20,14 @@ function Edit({id,commentBody, setCommentBody, setIsHidden, onHandleUpdateCommen
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            commentBody: commentBody,
-          }),
+          body: JSON.stringify(commentBody),
         })
           .then((response) => response.json())
-          .then((data) => onHandleUpdateComment(data));
+          .then((data) => {
+            console.log(data)
+            console.log(commentBody)
+          })
+          // .then((data) => onHandleUpdateComment(data));
     
         setIsHidden((isHidden) => !isHidden);
         
@@ -34,7 +38,7 @@ function Edit({id,commentBody, setCommentBody, setIsHidden, onHandleUpdateCommen
           <div>
             <input
               type="text"
-              name="comment"
+              name="user_comment"
               value={commentBody}
               onChange={handleChange}
               contentEditable={true}
