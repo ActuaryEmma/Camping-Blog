@@ -27,7 +27,7 @@ function LoginForm({onLogin}) {
           r.json().then((user) =>{
 
             onLogin(user)
-            navigate("/")
+            // navigate("/")
           });
 
 
@@ -35,11 +35,7 @@ function LoginForm({onLogin}) {
           r.json().then((err) => setErrors(err.errors));
         }
       });
-      
-      // console.log({
-      //   username, password
-
-      // })
+    
 
      }
     

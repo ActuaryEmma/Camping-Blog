@@ -21,7 +21,7 @@ function Blog({user, setUser}) {
       .then((response) => response.json())
       .then((data) => setBlog(data))
 
-  }, [setCommentData]);
+  }, [commentData]);
 
   return (
     <div>

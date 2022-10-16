@@ -18,7 +18,9 @@ function EditComment({
   function handleUpdateComment(updatedComments) {
     const updateComments = commentData.map((item) =>
       item.id === updatedComments.id ? updatedComments : item
+      
     );
+    console.log(updateComments)
     setCommentData(updateComments);
   }
 
