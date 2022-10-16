@@ -45,7 +45,7 @@ function Signup({onLogin}) {
       <div className="main">
         {errors.map((error) => {
           
-         return <p key={error} style={{color: "red"}}>{error}</p>
+         return <p key={error} style={{color: "white"}}>{error}</p>
         })}
         <div>
           <div>
@@ -56,23 +56,22 @@ function Signup({onLogin}) {
             </div>
             <br />
             <div>
-              <input type="text" placeholder="email" className="name"value={email}
+              <input type="email" placeholder="email" className="name"value={email}
           onChange={(e) => setEmail(e.target.value)} />
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password" className="name" value={password}
+              <input type="password" placeholder="password" className="name" value={password}
           onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password confirmation" className="name" value={passwordConfirmation}
+              <input type="password" placeholder="password confirmation" className="name" value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)} />
-            </div>
+            </div><br/>
 
-            <button onClick={handleSubmit} type="button" className="button-1">
-              Login
-            </button>
+            <input type="submit" className="button-1" value="Sign up"/>
+  
           </div>
         </div>
       </div>

@@ -41,10 +41,10 @@ function LoginForm({onLogin}) {
     
 
 return (
-    <form >
+    <form onSubmit={handleSubmit}  >
       <div className="main">
         {errors.map((error) => {
-          return  <p  style={{color: "red"}} key={error}>{error}</p>
+          return  <p  style={{color: "white"}} key={error}>{error}</p>
         })}
         <div>
           <div>
@@ -55,14 +55,13 @@ return (
             </div>
             <br />
             <div>
-              <input type="text" placeholder="password" className="name"  value={password}
+              <input type="password" placeholder="password" className="name"  value={password}
           onChange={(e) => setPassword(e.target.value)}/>
             </div>
             <br />
             <div>
-            <button onClick={handleSubmit} type="button" className="button-1">
-              Login
-            </button>
+            <input type="submit" className="button-1" value="Login"/>
+      
             </div><br/>
             
           </div>
