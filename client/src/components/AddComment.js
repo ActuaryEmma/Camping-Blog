@@ -4,7 +4,7 @@ function AddComment({commentData, setCommentData, blogid}){
 
     const formreset = useRef()
 
-    console.log(blogid)
+    // console.log(blogid)
     const[newObj, setNewObj] = useState({
         user_comment: "",
         blog_id: blogid

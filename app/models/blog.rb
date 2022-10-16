@@ -1,6 +1,6 @@
 class Blog < ApplicationRecord
-    validates :title, presence: true, uniqueness: false
-    validates :description, presence: true, uniqueness: false
+    validates :title, presence: true
+    validates :description, presence: true
 
     has_many :comments
     has_many :users, through: :comments

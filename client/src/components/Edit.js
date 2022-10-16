@@ -7,7 +7,7 @@ function Edit({ id, commentBody, setCommentBody, setIsHidden, onHandleUpdateComm
   }
 
   function handleSubmit(e) {
-    console.log(e);
+    // console.log(e);
     e.preventDefault();
 
     fetch(`/comments/${id}`, {

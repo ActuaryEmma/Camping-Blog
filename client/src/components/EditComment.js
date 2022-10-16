@@ -20,7 +20,7 @@ function EditComment({
       item.id === updatedComments.id ? updatedComments : item
       
     );
-    console.log(updateComments)
+    // console.log(updateComments)
     setCommentData(updateComments);
   }
 

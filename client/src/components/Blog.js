@@ -26,7 +26,7 @@ function Blog({user, setUser}) {
   return (
     <div>
       {blog.map((item) => {
-        console.log(item);
+        // console.log(item);
         return (
           <BlogCard
           user={user} 

@@ -23,7 +23,7 @@ function DeleteComment({id, blog, setCommentData, blog_id}){
             setCommentData(updateComments);  
         })
 
-     
+         window.location.reload(false);
     }
     return(
         <div>
