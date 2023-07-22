@@ -1,7 +1,6 @@
 # README
 
 # CampKe (blog website)
- ## Group G
  
 ## Screenshot
  !![Screenshot from 2022-10-14 08-40-42](https://user-images.githubusercontent.com/104425175/195777458-86e0bdec-ff2e-4abf-ac39-ec21d1d363fd.png)
@@ -13,7 +12,6 @@
  - [Behaviour Driven Development](#Behaviour-Driven-Development)
  - [Requirements](#requirements)
  - [Installation Process](#installation-Process)
- - [Live Link](#Live-Link)
  - [Technology  Used](#technology-Used)
  - [Licence](#licence)
  - [Authors Info](#Authors-Info)
@@ -37,8 +35,6 @@ As a user of the application,you will be able to :
 * Open the index file from the zipped file with any browser.
  ****
  
-### video Link
-- Click this link to view the video review for the application:
 
 ### Repolink
 - Click this link to view the back end repo https://github.com/ActuaryEmma/Camping-Blog
@@ -52,7 +48,7 @@ As a user of the application,you will be able to :
 
 
 ## Licence
-Copyright (c) [2022] [group G]
+Copyright (c) [2022] [ActuaryEmma]
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -69,11 +65,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-## Authors Info
-Slack Profile
- - Emma Nyakio
- - Carlton Mbaja
- - Byron Odhiambo
- - Simon Kamau
  
