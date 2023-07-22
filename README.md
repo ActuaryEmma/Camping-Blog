@@ -13,7 +13,6 @@
  - [Behaviour Driven Development](#Behaviour-Driven-Development)
  - [Requirements](#requirements)
  - [Installation Process](#installation-Process)
- - [Live Link](#Live-Link)
  - [Technology  Used](#technology-Used)
  - [Licence](#licence)
  - [Authors Info](#Authors-Info)
@@ -36,9 +35,7 @@ As a user of the application,you will be able to :
 * Unzip the downloaded files in a folder of choice.
 * Open the index file from the zipped file with any browser.
  ****
- 
-### video Link
-- Click this link to view the video review for the application:
+
 
 ### Repolink
 - Click this link to view the back end repo https://github.com/ActuaryEmma/Camping-Blog
@@ -52,7 +49,7 @@ As a user of the application,you will be able to :
 
 
 ## Licence
-Copyright (c) [2022] [group G]
+Copyright (c) [2022]
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -70,10 +67,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## Authors Info
-Slack Profile
- - Emma Nyakio
- - Carlton Mbaja
- - Byron Odhiambo
- - Simon Kamau
  
